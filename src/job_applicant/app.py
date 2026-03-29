@@ -12,7 +12,11 @@ Gradio UI for the Multi-Agent Job Application System.
 import json
 import os
 import threading
+from dotenv import load_dotenv
 import gradio as gr
+
+# Load .env from project root
+load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), ".env"))
 
 from .main import run as run_pipeline
 from .state import ApplicationStateManager

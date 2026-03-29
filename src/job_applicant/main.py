@@ -12,15 +12,19 @@ import os
 import sys
 import warnings
 from datetime import datetime
+from dotenv import load_dotenv
+
+# Base directory for the job_applicant project
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+# Load .env from project root
+load_dotenv(os.path.join(BASE_DIR, ".env"))
 
 from .crews.research_crew import ResearchCrew
 from .crews.application_crew import ApplicationCrew
 from .state import ApplicationStateManager
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
-
-# Base directory for the job_applicant project
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 def run(

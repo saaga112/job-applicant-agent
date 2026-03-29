@@ -158,7 +158,6 @@ def create_app():
 
     with gr.Blocks(
         title="Job Application Agent",
-        theme=gr.themes.Soft(),
     ) as app:
         gr.Markdown(
             "# 🎯 Multi-Agent Job Application System\n"
@@ -260,7 +259,7 @@ def create_app():
 def launch():
     """Launch the Gradio app."""
     app = create_app()
-    app.launch(share=False)
+    app.launch(share=False, theme=gr.themes.Soft())
 
 
 if __name__ == "__main__":

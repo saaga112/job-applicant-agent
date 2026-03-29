@@ -1,0 +1,15 @@
+[project]
+name = "job-applicant"
+version = "0.1.0"
+description = "Multi-agent automated job application system using CrewAI"
+requires-python = ">=3.12"
+dependencies = [
+    "crewai>=0.86.0",
+    "crewai-tools>=0.17.0",
+    "gradio>=5.22.0",
+    "playwright>=1.51.0",
+    "pypdf>=5.4.0",
+    "python-docx>=1.1.0",
+    "pydantic>=2.11.0",
+    "openai>=1.85.0",
+]

@@ -8,8 +8,8 @@ class Experience(BaseModel):
     """A single work experience entry."""
     company: str = Field(description="Company name")
     title: str = Field(description="Job title")
-    start_date: str = Field(description="Start date (e.g., 'Jan 2020')")
-    end_date: str = Field(default="Present", description="End date or 'Present'")
+    start_date: Optional[str] = Field(default=None, description="Start date (e.g., 'Jan 2020')")
+    end_date: Optional[str] = Field(default="Present", description="End date or 'Present'")
     bullets: List[str] = Field(default_factory=list, description="Achievement bullet points")
     keywords: List[str] = Field(default_factory=list, description="Extracted skill keywords")
 
@@ -17,10 +17,10 @@ class Experience(BaseModel):
 class Education(BaseModel):
     """A single education entry."""
     institution: str = Field(description="School or university name")
-    degree: str = Field(description="Degree type (e.g., 'B.S.', 'M.S.', 'Ph.D.')")
-    field: str = Field(description="Field of study")
+    degree: Optional[str] = Field(default=None, description="Degree type (e.g., 'B.S.', 'M.S.', 'Ph.D.')")
+    field: Optional[str] = Field(default=None, description="Field of study")
     gpa: Optional[str] = Field(default=None, description="GPA if listed")
-    graduation_date: str = Field(description="Graduation date")
+    graduation_date: Optional[str] = Field(default=None, description="Graduation date")
 
 
 class CandidateProfile(BaseModel):

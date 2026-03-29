@@ -9,8 +9,8 @@ from ..tools.job_search_tool import JobSearchTool
 class ResearchCrew():
     """Research crew: parses resume, searches jobs, and matches candidates to postings."""
 
-    agents_config = '../config/agents.yaml'
-    tasks_config = '../config/tasks.yaml'
+    agents_config = '../config/research_agents.yaml'
+    tasks_config = '../config/research_tasks.yaml'
 
     resume_path: str = ""
 

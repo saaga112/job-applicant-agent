@@ -9,8 +9,8 @@ from ..tools.job_apply_tool import JobApplyTool
 class ApplicationCrew():
     """Application crew: tailors resume, writes cover letter, and submits application for a single job."""
 
-    agents_config = '../config/agents.yaml'
-    tasks_config = '../config/tasks.yaml'
+    agents_config = '../config/application_agents.yaml'
+    tasks_config = '../config/application_tasks.yaml'
 
     @agent
     def resume_tailor(self) -> Agent:
